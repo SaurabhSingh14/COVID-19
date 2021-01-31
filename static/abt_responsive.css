@@ -1,0 +1,42 @@
+@media (max-width:400px){
+    .form input {
+        text-align: inherit;
+        display: block;
+        width: 60%;
+        padding: 1px;
+        margin: 11px auto;
+        font-size: 20px;
+        font-family: cursive;
+        background-color: pink;
+        border: 2px solid maroon;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    .msgbox textarea {
+        display: block;
+        color: grey;
+        height: 170px;
+        padding: 1px;
+        margin: 11px auto;
+        font-size: 16px;
+        font-family: cursive;
+        background-color: pink;
+        border: 2px solid maroon;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 60%;
+    }    
+
+}
+
+@media (min-width:1250px){
+    .abtbtn {
+        display: block;
+        width: 280px;
+        margin: auto;
+        font-weight: bold;
+        font-family: emoji;
+        background-color: darkgray;
+        font-size: 18px;
+    }
+}

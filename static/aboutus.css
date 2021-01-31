@@ -1,0 +1,153 @@
+*{
+    top: 0px;
+    bottom: 0px;
+    padding: 0px;
+}
+body{
+    background-color: lightgray;
+    margin: -45px;
+}
+nav{
+    background-color: maroon;
+}
+nav h1{
+    text-align: center;
+    font-size: 54px;
+    color: cornsilk;
+}
+.about{
+    display: flex;
+    flex-direction: column;
+}
+.about h2{
+    text-align: center;
+    font-size: 35px;
+    font-family: system-ui;
+    margin: auto;
+    color: navy;
+    padding: 0px 50px;
+}
+.describe{
+    align-items: center;
+}
+.describe div{
+    text-align: center;
+    font-size: 21px;
+    font-family: cursive;
+    color: purple;
+    font-weight: bold;
+    margin: 16px;
+    padding: 0px 50px;
+}
+.form{
+    align-items: center;
+}
+.form input{
+    text-align: inherit;
+    display: block;
+    width: 384px;
+    padding: 1px;
+    margin: 11px auto;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: pink;
+    border: 2px solid maroon;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.msgbox textarea{
+    display: block;
+    color: grey;
+    width: 384px;
+    height: 170px;
+    padding: 1px;
+    margin: 11px auto;
+    font-size: 16px;
+    font-family: cursive;
+    background-color: pink;
+    border: 2px solid maroon;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.abtbtn {
+    display: block;
+    width: 21%;
+    margin: auto;
+    font-weight: bold;
+    font-family: emoji;
+    background-color: darkgray;
+    font-size: 18px;
+}
+.abtbtn:hover{
+    background-color: cornsilk;
+}
+.container{
+    display: flex;
+    justify-content: center;
+}
+.creator{
+    border-radius: 22px;
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    margin: 36px;
+    text-align: center;
+    background-color: teal;
+    transition: .7s;
+}
+.creator:hover{
+    background-color: seagreen;
+    transform: scale(1.1);
+}
+.info{
+    width:100%;
+}
+.creator h3{
+    font-family: cursive;
+    font-size: 29px;
+    margin: 8px;
+    color: ghostwhite;
+}
+.creator p{
+    font-family: cursive;
+    margin: 7px;
+    font-size: 20px;
+    font-weight: bold;
+    color: ghostwhite;
+}
+.image{
+    position: relative;
+    top: -37px;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 63px;
+    border-radius: 60%;
+  }
+.image img{
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    border-radius: 50%;
+    transition: 1s;
+}
+.image img:hover{
+    transform: scale(1.1);
+}
+.info i{
+    width: 43px;
+    height: 35px;
+    line-height: 37px;
+    color: maroon;
+    margin: 9px;
+    /* border: 1px solid #000; */
+    /* margin: 0 0px; */
+    cursor: pointer;
+    background-color: pink;
+    transition: .5s;
+}
+.info i:hover{
+    background-color: yellow;
+    color: crimson;
+    transform: translateY(-7px);
+}

@@ -1,0 +1,205 @@
+*{
+    top: 0px;
+    bottom: 0px;
+    padding: 0px;
+}
+header h1{
+    margin: 0px;
+    padding: 26px 0px;
+    font-family: system-ui;
+    color: black;
+    font-weight: 900;
+    text-decoration: underline;
+}
+header{
+    display: block;
+    text-align: center;
+    background-color: aliceblue;
+}
+.navbar{
+    /* border: 0.5rem solid yellow; */
+    background-color: #654949;
+    padding: 1px;
+}
+.nav{
+    padding: 0px 10px;
+}
+.hamburger{
+    display: none;
+}
+.menu{
+    display: flex;
+}
+.nav li{
+    list-style: none;
+    transition: .5s;
+    padding: 13px 0px;
+}
+.nav li:hover{
+    transform: translateY(-5px);
+}
+a{
+    text-decoration: none;
+    padding: 9px 16px;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    font-family: -webkit-pictograph;
+    
+}
+a:hover{
+    color:grey;
+}
+#map{
+    width: 98vw;
+    height: 50vh
+}
+.acrosstheglobe p{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: darkred;
+    margin: 0px;
+    padding: 22px 0px;
+    background-color: aliceblue;
+}
+.info_cards{
+    display: flex;
+    justify-content: center;
+    background-color: aliceblue;
+}
+.block {
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 21px;
+    width: 30%;
+    margin: 11px;
+    padding: 0px 7px;
+    height: 169px;
+    background-color: lavenderblush;
+    transition: .5s;
+    overflow: hidden;
+}
+.block:hover{
+    transform: scale(1.1);
+}
+.block h2{
+    text-align: center;
+    font-size: 2rem;
+    font-family: 'Texturina';
+    color: black;
+    text-decoration: underline;
+}
+.text_font {
+    font-weight: bold;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 2.5rem;
+    color: darkred;
+
+}
+#barchart_values{
+    /* display: inline-block; */
+    width: 569px;
+    transition: .5s;
+}
+#chart_div{
+    width: 420px;
+    transition: .5s;
+}
+#piechart_3d{
+    position: relative;
+    transition: .5s;
+}
+#charts:hover .graph{
+    filter: blur(5px);
+}
+#charts:hover .graph:hover{
+    transform: scale(1.1);
+    filter: blur(0px);
+}
+/* .graph{
+    display: inline-block;
+} */
+
+navbar .analysis{
+    text-align: center;
+    background-color: #654949;
+    font-size: 3rem;
+    color: paleturquoise;
+    font-weight: bold;
+    font-family: serif;
+}
+#charts{
+    display: flex;
+    justify-content: center;
+    border: 2px solid darkred;
+    border-width: 4px;
+    border-radius: 21px;
+    overflow: hidden;
+}
+.description{
+    display: inline-block;
+    width: 48%;
+    margin: 8px;
+}
+.description li {
+    font-family: 'Texturina', serif;
+    font-size: 18px;
+    color: whitesmoke
+}
+.form-fill input{
+    text-align: inherit;
+    display: block;
+    width: 384px;
+    padding: 1px;
+    margin: 11px auto;
+    font-size: 20px;
+    font-family: cursive;
+    background-color: cornsilk;
+    overflow: hidden;
+}
+.btn {
+    display: block;
+    width: 384px;
+    margin: 20px auto;
+    font-size: larger;
+    font-weight: bold;
+    font-family: cursive;
+    background-color: cadetblue;
+}
+.btn:hover{
+    background-color: cornsilk;
+}
+navbar .contact{
+    text-align: center;
+    background-color: #654949;
+    font-size: 3rem;
+    color: paleturquoise;
+    font-weight: bold;
+    font-family: serif;
+}
+#form{
+    background-color: firebrick;
+    display: flex;
+}
+.formHead{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-decoration: underline;
+    color: white;
+}
+.adviceHead{
+    text-align: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+    font-size: 29px;
+    color: white;
+}
+footer{
+    text-align: center;
+    color:white;
+    background-color: #654949;
+}

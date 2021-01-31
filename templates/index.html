@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" media="screen and (max-width: 1236px)" href="{{ url_for('static', filename='responsive.css') }}">
+    <!-- <link rel="stylesheet" href="../static/style.css"> -->
+    <!-- <link rel="stylesheet" media="screen and (max-width: 1236px)" href="../static/responsive.css"> -->
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.css' rel='stylesheet' />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Yeon+Sung&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Goldman&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Texturina:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <!-- <script src="../static/index.js"></script> -->
+    <title>COVID UPDATES</title>
+</head>
+<header>
+    <h1>CORONAVIRUS (COVID-19) UPDATES</h1>
+</header>
+<body>
+    <nav class="navbar">
+        <ul class="nav">
+            <div class="hamburger">
+                <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+            </div>
+            <div class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About us</a></li>
+                <li><a href="https://www.mohfw.gov.in/pdf/coronvavirushelplinenumber.pdf" target="_blank">Helpline No.</a></li>
+                <li><a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/donate" target="_blank">Donate</a></li>
+            </div>
+        </ul>
+    </nav>
+    <section class="acrosstheglobe">
+        <p>Across the globe</p>
+    </section>
+    <div id='map'></div>
+    <section class="info_cards">
+        <div class="block">
+            <h2>Total Cases</h2>
+            <p class="text_font">{{total_cases}}</p>
+        </div>
+        <div class="block">
+            <h2>Recovered Cases</h2>
+            <p class="text_font">{{recovered_cases}}</p>
+        </div>
+        <div class="block">
+            <h2>Total Deaths</h2>
+            <p class="text_font">{{total_deaths}}</p>
+        </div>
+    </section>
+    <navbar class="Analysis">
+        <h2 class="analysis">Analysis</h2>
+    </navbar>
+
+    <section id="charts">
+        <div id="barchart_values" class="graph"></div>
+        <div id="chart_div" class="graph"></div>
+        <div id="piechart_3d" class="graph"></div>
+    </section>
+    <navbar>
+        <h2 class="contact">Contact Us</h2>
+    </navbar>
+    <section id="form">
+        <div class="description">
+            <h2 class="formHead">Fill out the form to get the latest Updates.</h2>
+            <form method="POST">
+                <div class="form-fill">
+                    <input type="text" name="_fname" placeholder="Enter your First Name">
+                </div>
+                <div class="form-fill">
+                    <input type="text" name="_lname" placeholder="Enter your Last Name">
+                </div>
+                <div class="form-fill">
+                    <input type="text" name="_age" placeholder="Enter your Age">
+                </div>
+                <div class="form-fill">
+                    <input type="text" name="_email" placeholder="Enter your Email Id">
+                </div>
+                <div class="form-fill">
+                    <input type="text" name="_state" placeholder="Enter your State">
+                </div>
+                <div class="form-fill">
+                    <input type="text" name="_country" placeholder="Enter your Country">
+                </div>
+                <button class="btn" onclick="myalert()">Submit</button>
+            </form>
+        </div>
+        <div class="description">
+            <h2 class="adviceHead">Just an <strong>ADVICE.</strong></h2>
+            <ul>
+                <li><strong>Maintain at least a 1-metre distance</strong> between yourself and others to reduce your risk of infection when they cough, sneeze or speak. Maintain an even greater distance between yourself and others when indoors. <strong>The further away, the better.</strong></li>
+                <li><strong>Make wearing a mask a normal part</strong> of being around other people. The appropriate use, storage and cleaning or disposal are essential to make masks as effective as possible.</li>
+                <li><strong>Clean your hands</strong> before you put your mask on, as well as before and after you take it off, and after you touch it at any time.</li>
+                <li>Make sure it covers both your nose, mouth and chin.</li>
+                <li>When you take off a mask, store it in a clean plastic bag, and every day either wash it if it’s a fabric mask, or <strong>dispose of a medical mask in a trash bin.</strong></li>
+                <li>Don’t use masks with valves.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="case_val" data-caseval1={{caseval[0]}} data-caseval2={{caseval[1]}} data-caseval3={{caseval[2]}} data-caseval4={{caseval[3]}} data-caseval5={{caseval[4]}}></div>
+    <div id="cty_val" data-ctyval1={{ctyval[0]}} data-ctyval2={{ctyval[1]}} data-ctyval3={{ctyval[2]}} data-ctyval4={{ctyval[3]}} data-ctyval5={{ctyval[4]}}></div>
+    
+    <div id="a_cases" data-acval1={{acval[0]}} data-acval2={{acval[1]}} data-acval3={{acval[2]}} data-acval4={{acval[3]}} data-acval5={{acval[4]}}></div>
+    <div id="dpc" data-dpcval1={{dpcval[0]}} data-dpcval2={{dpcval[1]}} data-dpcval3={{dpcval[2]}} data-dpcval4={{dpcval[3]}} data-dpcval5={{dpcval[4]}}></div>
+    <div id="rpc" data-rpcval1={{rpcval[0]}} data-rpcval2={{rpcval[1]}} data-rpcval3={{rpcval[2]}} data-rpcval4={{rpcval[3]}} data-rpcval5={{rpcval[4]}}></div>
+    <div id="n_cases" data-ncval1={{ncval[0]}} data-ncval2={{ncval[1]}} data-ncval3={{ncval[2]}} data-ncval4={{ncval[3]}} data-ncval5={{ncval[4]}}></div>
+
+</body>
+<footer>Copyright © 2020-2021 by Saurabh Singh</footer>
+<script src="{{ url_for('static', filename='index.js') }}"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.0.0/mapbox-gl.js'></script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoic2F1cmFiaDE0IiwiYSI6ImNramJuN2xncTduZjcyeWxiYTUwM21nNm0ifQ.TJdHwbhppsHW1Vb5LQruwQ';
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/dark-v10',
+        zoom: 2,
+        center: [0, 40]
+    });
+</script>
+<script>
+    function toggleMenu() {
+        let getMenu = document.querySelector(".menu");
+        getMenu.classList.toggle("ham");
+        }
+
+        let getHamburger = document.querySelector(".hamburger");
+        getHamburger.addEventListener("click", toggleMenu);    
+    </script>
+
+</html>

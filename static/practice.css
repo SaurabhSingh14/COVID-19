@@ -1,0 +1,9 @@
+#map{
+    width: 98vw;
+    height: 50vh
+}
+#piechart_3d{
+    display: inline !important;
+    width: 500;
+    height: 400,
+}

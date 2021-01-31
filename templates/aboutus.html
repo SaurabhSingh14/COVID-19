@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='aboutus.css') }}">
+    <!-- <link rel="stylesheet" href="../static/aboutus.css"> -->
+    <!-- <link rel="stylesheet" media="screen and (max-width: 2652px)" href="../static/abt_responsive.css"> -->
+    <link rel="stylesheet" media="screen and (max-width: 2652px)" href="{{ url_for('static', filename='abt_responsive.css') }}">
+    <title>About Us</title>
+</head>
+<header>
+    <nav>
+        <h1>Feedback</h1>
+    </nav>
+</header>
+<body>
+    <div class="about">
+        <h2>Hey!<br>Do you love the website?</h2>
+        <div class="describe">
+            <div>
+                Let us know. We would love to hear your feedback.
+                <br>All you have to do is just enter the details below & hit the Submit button.
+            </div>
+        </div>
+        <form method="POST">
+            <div class="form">
+                <input type="text" name="_email" placeholder="Enter your E-mail id.">
+            </div>
+            <div class="msgbox">
+                <textarea name="_msg" rows="4" cols="50">Type your Message Here...</textarea>
+            </div>
+            <button class="abtbtn" onclick="aboutalert()">Submit</button>
+        </form>
+        <script>
+            function aboutalert(){
+                alert('Thanks for your feedback !');
+            }
+        </script>
+    </div>
+    <nav>
+        <h1>Developer</h1>
+    </nav>
+    <div class="container">
+        <div class="creator">
+            <div class="info">
+                <div class="image">
+                    <img src="../static/_saurabh.jpg">
+                </div>
+                <h3>Saurabh Singh</h3>
+                <p class="role">Web developer</p>
+                
+                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <a href="https://www.instagram.com/saurabh_singh.14/" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

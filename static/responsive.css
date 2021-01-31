@@ -1,0 +1,191 @@
+@media (max-width: 1235px){
+    #charts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 2px solid darkred;
+        border-width: 4px;
+        border-radius: 21px;
+        overflow: hidden;
+        /* width: 1105px; */
+    }
+    #charts:hover .graph{
+        filter: blur(0px);
+    }
+    #charts:hover .graph:hover{
+        transform: scale(1.1);
+    }
+}
+@media (min-width:780px) and (max-width: 1235px)
+{
+    .block {
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 21px;
+        width: 28%;
+        margin: 11px;
+        padding: 0px 7px;
+        height: 169px;
+        background-color: lavenderblush;
+        transition: .5s;
+    }
+    .block h2 {
+        text-align: center;
+        font-size: 29px;
+        font-family: 'Texturina';
+        color: black;
+        text-decoration: underline;
+    }
+    
+}
+@media (max-width:900px){
+    #form {
+        background-color: firebrick;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .description {
+        display: inline-block;
+        width: 90%;
+        margin: 0px;
+    }
+    .formHead {
+        text-align: center;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: bold;
+        font-size: 30px;
+        text-decoration: underline;
+        margin: 20px;
+    }
+}
+@media (min-width:590px) and (max-width: 900px){
+    .form-fill input {
+        text-align: inherit;
+        display: block;
+        width: 527px;
+        padding: 1px;
+        margin: 11px auto;
+        font-size: 20px;
+        font-family: cursive;
+        background-color: cornsilk;
+    }
+    .btn {
+        display: block;
+        width: 527px;
+        margin: 20px auto;
+        font-size: larger;
+        font-weight: bold;
+        font-family: cursive;
+        background-color: cadetblue;
+    }
+}
+@media (max-width:589px){ 
+    .form-fill input {
+        text-align: inherit;
+        display: block;
+        width: 100%;
+        padding: 1px;
+        margin: 11px auto;
+        font-size: 20px;
+        font-family: cursive;
+        background-color: cornsilk;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+        margin: 20px auto;
+        font-size: larger;
+        font-weight: bold;
+        font-family: cursive;
+        background-color: cadetblue;
+    }
+}
+@media (max-width: 779px){
+    .info_cards {
+        display: flex;
+        /* justify-content: center; */
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width:350px) and (max-width:779px){
+    .block {
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 21px;
+        width: 100%;
+        margin: 11px;
+        padding: 0px 7px;
+        height: 154px;
+        background-color: lavenderblush;
+        transition: .5s;
+    }
+    .block h2 {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Texturina';
+        color: black;
+        text-decoration: none;
+        margin: 0px;
+    }
+    .text_font {
+        font-weight: bold;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 54px;
+        color: darkred;
+        margin: 12px;
+    }
+}
+@media (max-width:350px){
+    .block {
+        display: inline-block;
+        border: 2px solid black;
+        border-radius: 21px;
+        width: 100%;
+        margin: 11px;
+        padding: 0px 7px;
+        height: 109px;
+        background-color: lavenderblush;
+        transition: .5s;
+    }
+    .block h2 {
+        text-align: center;
+        font-size: 31px;
+        font-family: 'Texturina';
+        color: black;
+        text-decoration: none;
+        margin: 0px;
+    }
+    .text_font {
+        font-weight: bold;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 41px;
+        color: darkred;
+        margin: 12px;
+    }
+}
+@media (max-width: 779px){
+    .hamburger{
+        display: initial;
+        color: white;
+        cursor: pointer;
+        transition: .5s;
+    }
+    .hamburger:hover{
+        transform: translateY(-5px);
+        color: gray;
+    }
+}
+@media (max-width: 779px){
+    .menu{
+        display: none;
+    }
+    .ham{
+        display: block;
+        transition: .5s;
+    }
+}

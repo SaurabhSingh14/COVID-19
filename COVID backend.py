@@ -1,4 +1,4 @@
-import requests, os, pymongo
+import requests, os
 from flask import Flask, render_template, json, request
 
 # url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
@@ -17,11 +17,11 @@ from flask import Flask, render_template, json, request
 # other = int(data['world_total']['total_cases'].replace(',', ''))-sum(lst_cases)
 # print(int(data['world_total']['total_cases'].replace(',', '')),sum(lst_cases),other)
 
-client = pymongo.MongoClient('mongodb://127.0.0.1:27017/')
-mydb1 = client['Contacts']
-mydb2 = client['Feedback']
-c_info = mydb1.contactsdetails
-f_info = mydb2.feedbackdetails
+# client = pymongo.MongoClient('mongodb://127.0.0.1:27017/')
+# mydb1 = client['Contacts']
+# mydb2 = client['Feedback']
+# c_info = mydb1.contactsdetails
+# f_info = mydb2.feedbackdetails
 
 lst_cases = []
 lst_country = []
@@ -53,7 +53,7 @@ def home():
             'State': state,
             'Country': country
         }
-        c_info.insert_one(c_details)
+        # c_info.insert_one(c_details)
 
     url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
     headers = {
@@ -76,10 +76,11 @@ def home():
     total = data['world_total']['total_cases']
     recovered = data['world_total']['total_recovered']
     deaths = data['world_total']['total_deaths']
+    update = data['statistic_taken_at']
 
     return render_template('index.html', total_cases=total, recovered_cases=recovered, total_deaths=deaths,
                            caseval=lst_cases, ctyval=lst_country, acval=a_cases, dpcval=deaths_, rpcval=recovered_,
-                           ncval=new_cases)
+                           ncval=new_cases, last_update=update)
 
 
 @app.route('/about', methods=['GET', 'POST'])
@@ -92,7 +93,7 @@ def about():
             'Email': email,
             'Message': msg
         }
-        f_info.insert_one(f_details)
+        # f_info.insert_one(f_details)
 
     return render_template('aboutus.html')
 

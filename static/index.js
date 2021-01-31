@@ -124,19 +124,10 @@ function update() {
        .then(response => response.json())
        .then(rsp => {
            rsp.data.forEach(element => {
-               // console.log(rsp.data)
+
                latitude = element.latitude;
                longitude = element.longitude;
 
-               // cases = element.infected;
-               // if (cases > 255) {
-               //     color = "rgb(255, 0, 0)";
-               // }
-               // else {
-               //     color = `rgb(${cases}, 0, 0)`;
-               // }
-
-               // Mark on the map
                var mar = new mapboxgl.Marker({
                    draggable: false,
                    color: 'red'

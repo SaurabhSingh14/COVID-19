@@ -106,5 +106,5 @@ def about():
 #     data = json.load(open(json_url))
 #     return data
 
-
-app.run()
+if __name__ == '__main__':
+    app.run()

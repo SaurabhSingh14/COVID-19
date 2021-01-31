@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5ef65808-617e-4189-85ed-a759f5eba22b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/COVID backend.py" beforeDir="false" afterPath="$PROJECT_DIR$/COVID backend.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COVID.py" beforeDir="false" afterPath="$PROJECT_DIR$/COVID.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +37,28 @@
       <recent name="D:\VS\COVID\static" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.COVID (1)">
+    <configuration name="COVID (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="COVID" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/COVID.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="COVID" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="COVID" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -64,6 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.COVID (1)" />
         <item itemvalue="Python.COVID backend" />
       </list>
     </recent_temporary>
@@ -79,7 +98,19 @@
       <option name="presentableId" value="Default" />
       <updated>1610284579143</updated>
     </task>
+    <task id="LOCAL-00001" summary="filename changed">
+      <created>1612114483332</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1612114483332</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="filename changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="filename changed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="421" y="5" key="#COVID_backend" timestamp="1610284675692">
@@ -94,26 +125,30 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="456" y="174" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1610299464356" />
-    <state width="1343" height="322" key="GridCell.Tab.0.bottom" timestamp="1612111720367">
+    <state x="336" y="0" key="CommitChangelistDialog2" timestamp="1612114476771">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="322" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612111720367" />
-    <state width="1343" height="322" key="GridCell.Tab.0.center" timestamp="1612111720366">
+    <state x="336" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1612114476771" />
+    <state width="1343" height="322" key="GridCell.Tab.0.bottom" timestamp="1612116719217">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="322" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612111720366" />
-    <state width="1343" height="322" key="GridCell.Tab.0.left" timestamp="1612111720348">
+    <state width="1343" height="322" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1612116719217" />
+    <state width="1343" height="322" key="GridCell.Tab.0.center" timestamp="1612116719215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="322" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612111720348" />
-    <state width="1343" height="322" key="GridCell.Tab.0.right" timestamp="1612111720366">
+    <state width="1343" height="322" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1612116719215" />
+    <state width="1343" height="322" key="GridCell.Tab.0.left" timestamp="1612116719213">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1343" height="322" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612111720366" />
-    <state x="186" y="9" key="SettingsEditor" timestamp="1611775572027">
+    <state width="1343" height="322" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1612116719213" />
+    <state width="1343" height="322" key="GridCell.Tab.0.right" timestamp="1612116719215">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="186" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1611775572027" />
+    <state width="1343" height="322" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1612116719215" />
+    <state x="219" y="11" key="SettingsEditor" timestamp="1612116594736">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="219" y="11" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1612116594736" />
     <state x="0" y="0" width="737" height="728" key="find.popup" timestamp="1612094594928">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

@@ -1,6 +1,7 @@
 import requests, os
 from flask import Flask, render_template, json, request
 
+
 # url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
 # headers = {
 #         'x-rapidapi-key': "41a31b52c5mshff8c53035011ea2p154c41jsnf1d5045be509",
@@ -104,5 +105,6 @@ def data_fun():
     json_url = os.path.join(site_root, "static", "data.json")
     data = json.load(open(json_url))
     return data
+
 
 app.run()

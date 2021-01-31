@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5ef65808-617e-4189-85ed-a759f5eba22b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/COVID.py" beforeDir="false" afterPath="$PROJECT_DIR$/COVID.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +84,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.COVID (1)" />
-        <item itemvalue="Python.COVID backend" />
       </list>
     </recent_temporary>
   </component>

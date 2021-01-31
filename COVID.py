@@ -1,5 +1,5 @@
-import requests, os
-from flask import Flask, render_template, json, request
+import requests
+from flask import Flask, render_template, request
 
 
 # url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
@@ -99,12 +99,12 @@ def about():
     return render_template('aboutus.html')
 
 
-@app.route('/data')
-def data_fun():
-    site_root = os.path.realpath(os.path.dirname(__file__))
-    json_url = os.path.join(site_root, "static", "data.json")
-    data = json.load(open(json_url))
-    return data
+# @app.route('/data')
+# def data_fun():
+#     site_root = os.path.realpath(os.path.dirname(__file__))
+#     json_url = os.path.join(site_root, "static", "data.json")
+#     data = json.load(open(json_url))
+#     return data
 
 
 app.run()

@@ -1,28 +1,14 @@
-import requests,os
+import requests, os
+from pymongo import MongoClient
 from flask import Flask, render_template, json, request
 
+link='mongodb+srv://saurabh14:Saurabhatlas1405@cluster0.mcawo.mongodb.net/Contacts?retryWrites=true&w=majority'
+client = MongoClient('{url}'.format(url=link))
+mydb1=client.get_database('Contacts')
+mydb2=client.get_database('Feedback')
 
-# url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
-# headers = {
-#         'x-rapidapi-key': "41a31b52c5mshff8c53035011ea2p154c41jsnf1d5045be509",
-#         'x-rapidapi-host': "corona-virus-world-and-india-data.p.rapidapi.com"
-#         }
-# response = requests.request("GET", url, headers=headers)
-# data = response.json()
-#
-# lst_cases = []
-#
-# for i in range(5):
-#     lst_cases.append(int(data['countries_stat'][i]['cases'].replace(',', '')))
-#
-# other = int(data['world_total']['total_cases'].replace(',', ''))-sum(lst_cases)
-# print(int(data['world_total']['total_cases'].replace(',', '')),sum(lst_cases),other)
-
-# client = pymongo.MongoClient('mongodb://127.0.0.1:27017/')
-# mydb1 = client['Contacts']
-# mydb2 = client['Feedback']
-# c_info = mydb1.contactsdetails
-# f_info = mydb2.feedbackdetails
+c_records=mydb1.contact_details
+f_records=mydb2.feedback_details
 
 lst_cases = []
 lst_country = []
@@ -54,7 +40,7 @@ def home():
             'State': state,
             'Country': country
         }
-        # c_info.insert_one(c_details)
+        c_records.insert_one(c_details)
 
     url = "https://corona-virus-world-and-india-data.p.rapidapi.com/api"
     headers = {
@@ -94,7 +80,7 @@ def about():
             'Email': email,
             'Message': msg
         }
-        # f_info.insert_one(f_details)
+        f_records.insert_one(f_details)
 
     return render_template('aboutus.html')
 
@@ -105,6 +91,7 @@ def data_fun():
     json_url = os.path.join(site_root, "static", "data.json")
     data = json.load(open(json_url))
     return data
+
 
 if __name__ == '__main__':
     app.run()
